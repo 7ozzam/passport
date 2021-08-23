@@ -1,0 +1,35 @@
+
+<div class="d-flex justify-content-center flex-column align-items-center ">
+
+  <form class="col-4 text-center m-5" [formGroup]="uploadForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+
+      <input class="form-control" type="file" accept="image/jpeg, image/png, image/gif" name="image" (change)="onFileSelect($event)" id="formFile">
+    </div>
+    <div>
+      <!-- <button [disabled]='' class="btn btn-primary" type="submit">Upload</button> -->
+
+      <button class="btn btn-primary" type="submit" [disabled]="!!croppedImage || !!this.dataManagementService.loading">
+        <span *ngIf="!!this.dataManagementService.loading">
+          <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+          <span>Loading...</span>
+        </span>
+
+        <span *ngIf="!this.dataManagementService.loading">
+          Upload
+        </span>
+      </button>
+
+    </div>
+  </form>
+
+  <div class="d-flex flex-row justify-content-center">
+    <div class="m-3">
+      <img *ngIf="!!imgURL" [src]="imgURL" class="rounded mx-auto d-block img-thumbnail p-0" style="max-width: 400px;" >
+    </div>
+    <div class="m-3">
+      <img *ngIf="!!dataManagementService.croppedImage" [src]="dataManagementService.croppedImage" class="rounded mx-auto d-block img-thumbnail p-0" style="max-width: 400px;" >
+    </div>
+  </div>
+
+</div>

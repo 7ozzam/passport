@@ -1,0 +1,28 @@
+<nav class="navbar navbar-light navbar-expand-lg">
+  <div class="container-fluid px-0">
+    <a class="navbar-brand logo" href="#!">
+      <img src="assets/images/logo.png" />
+    </a>
+
+    <div ngbDropdown class="d-inline-block">
+      <button
+        class="btn"
+        style="box-shadow: none"
+        id="dropdownBasic1"
+        ngbDropdownToggle
+      >
+        Popular documents
+      </button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <a
+          href="/document/{{ item.id }}"
+          *ngFor="let item of dataManagementService.landingPageList"
+          class="fake-url"
+          ngbDropdownItem
+        >
+          {{ item.name }}
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
