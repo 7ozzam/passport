@@ -718,7 +718,7 @@ class RestApiService {
     constructor(http) {
         this.http = http;
         // Define API
-        this.apiBase = 'http://localhost:3000/api';
+        this.apiBase = 'https://fathomless-bastion-96634.herokuapp.com/api';
         this.apiURL = 'https://sdk.photoroom.com/v1';
         this.apiKey = 'fd24a7481f4d27d6741052516e4b671eb2c83216';
         // Http Options
