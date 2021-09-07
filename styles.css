@@ -4220,6 +4220,30 @@ body {
 .flex-center {
   justify-content: center;
   align-items: center; }
+.bg-light-primary {
+    background-color: #bdd7ff;
+    color: #0d49a1 !important;
+  }
+.bg-light-success {
+    background-color: #a6fcd4 !important;
+    color: #198754 !important;
+  }
+.bg-light-info {
+    background-color: #aff2ff;
+    color: #0796b3 !important;
+  }
+.bg-light-warning {
+    background-color: #fff0c3;
+    color: #ce9e10 !important;
+  }
+.bg-light-danger {
+    background-color: #ffb4bb;
+    color: #a71d2b !important;
+  }
+.text-success {
+    color: #00d68f !important;
+  }
+
 
 
 /*# sourceMappingURL=styles.css.map*/
